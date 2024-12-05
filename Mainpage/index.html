@@ -3,51 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Therapist Booking</title>
 </head>
 <body>
     <header>
-        <h1>Movie Ticket Booking</h1>
+        <h1>Welcome to Our Therapist Booking Website</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#appointments">Appointments</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="movie-list">
-            <h2>Now Showing</h2>
-            <div class="movie">
-                <img src="https://cdn.discordapp.com/attachments/832901888545652747/1302997434464735334/image.png?ex=6751b36c&is=675061ec&hm=12093f9d249ba8629ecdbab4e362d1a6e9a67471739667e2ec1f0effe8d37b58&" alt="Movie 1">
-                <h3>Porn movie</h3>
-                <p>Genre: Action</p>
-                <p>Rating: PG-13</p>
-                <button>Book Now</button>
+        <section id="services">
+            <h2>Services Offered</h2>
+            <div class="service">
+                <h3>Individual Therapy</h3>
+                <p>One-on-one sessions to help you work through personal challenges and improve mental health.</p>
             </div>
-            <div class="movie">
-                <img src="movie2.jpg" alt="Movie 2">
-                <h3>Movie Title 2</h3>
-                <p>Genre: Comedy</p>
-                <p>Rating: R</p>
-                <button>Book Now</button>
+            <div class="service">
+                <h3>Couples Therapy</h3>
+                <p>Guided sessions for couples to improve communication and resolve conflicts.</p>
             </div>
-            <div class="movie">
-                <img src="movie3.jpg" alt="Movie 3">
-                <h3>Movie Title 3</h3>
-                <p>Genre: Drama</p>
-                <p>Rating: PG</p>
-                <button>Book Now</button>
+            <div class="service">
+                <h3>Group Therapy</h3>
+                <p>Supportive group sessions that provide a safe space to share experiences and learn from others.</p>
             </div>
+        </section>
+
+        <section id="about">
+            <h2>About Our Services</h2>
+            <p>Our therapists are trained professionals dedicated to helping you achieve your mental health goals. We offer a variety of services tailored to meet your individual needs. Whether you're seeking support for anxiety, depression, relationship issues, or personal growth, we are here to help.</p>
+        </section>
+
+        <section id="appointments">
+            <h2>Book an Appointment</h2>
+            <form action="submit_appointment.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="service">Select Service:</label>
+                <select id="service" name="service" required>
+                    <option value="individual">Individual Therapy</option>
+                    <option value="couples">Couples Therapy</option>
+                    <option value="group">Group Therapy</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Book Appointment</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Movie Ticket Booking. All rights reserved.</p>
+        <p>&copy; 2023 Therapist Booking Website. All rights reserved.</p>
     </footer>
 </body>
 </html>

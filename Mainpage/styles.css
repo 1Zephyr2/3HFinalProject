@@ -6,14 +6,14 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background: #007bff;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -23,50 +23,31 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
-.movie-list {
+main {
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
-.movie {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
-    width: 200px;
-    text-align: center;
+section {
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.movie img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-button {
-    background: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #218838;
+.service {
+    margin-bottom: 20px;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
+    padding: 10px;
+    background: #007bff;
+    color: white;
     position: relative;
     bottom: 0;
     width: 100%;
