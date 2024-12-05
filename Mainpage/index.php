@@ -23,14 +23,17 @@
             <h2>Services Offered</h2>
             <div class="services-container"> <!-- Added container for centering -->
             <div class="service">
+                <img src="images/individual.png"/>
                 <h3>Individual Therapy</h3>
                 <p>One-on-one sessions to help you work through personal challenges and improve mental health.</p>
             </div>
             <div class="service">
+                <img src="images/couple.png"/>
                 <h3>Couples Therapy</h3>
                 <p>Guided sessions for couples to improve communication and resolve conflicts.</p>
             </div>
             <div class="service">
+                <img src="images/group.png"/>
                 <h3>Group Therapy</h3>
                 <p>Supportive group sessions that provide a safe space to share experiences and learn from others.</p>
             </div>
