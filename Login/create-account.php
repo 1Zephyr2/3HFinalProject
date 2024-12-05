@@ -27,7 +27,7 @@
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
             </div>
             <button type="submit">Create Account</button>
-            <p class="message">Already have an account? <a href="login.php">Login here</a></p>
+            <p class="message">Already have an account? <a href="index.php">Login here</a></p>
         </form>
     </div>
     <script src="create-account.js"></script>
