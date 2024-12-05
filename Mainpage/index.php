@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Welcome to MedTherapy</h1>
+        <img src="images/logo.png" alt="Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#services">Services</a></li>
