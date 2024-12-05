@@ -21,6 +21,7 @@
     <main>
         <section id="services">
             <h2>Services Offered</h2>
+            <div class="services-container"> <!-- Added container for centering -->
             <div class="service">
                 <h3>Individual Therapy</h3>
                 <p>One-on-one sessions to help you work through personal challenges and improve mental health.</p>
@@ -33,6 +34,7 @@
                 <h3>Group Therapy</h3>
                 <p>Supportive group sessions that provide a safe space to share experiences and learn from others.</p>
             </div>
+            </div>
         </section>
 
         <section id="about">
@@ -43,25 +45,30 @@
         <section id="appointments">
             <h2>Book an Appointment</h2>
             <form action="submit_appointment.php" method="POST">
+            <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
+                <input type="text" id="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
                 <label for="service">Select Service:</label>
                 <select id="service" name="service" required>
                     <option value="individual">Individual Therapy</option>
                     <option value="couples">Couples Therapy</option>
                     <option value="group">Group Therapy</option>
                 </select>
-
+            </div>
+            <div class="form-group">
                 <label for="date">Preferred Date:</label>
                 <input type="date" id="date" name="date" required>
-
+            </div>
+            <div class="form-group">
                 <label for="time">Preferred Time:</label>
                 <input type="time" id="time" name="time" required>
-
+            </div>
                 <button type="submit">Book Appointment</button>
             </form>
         </section>
