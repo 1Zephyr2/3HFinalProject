@@ -20,10 +20,11 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 0 15px;
+    
 }
 
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
 }
 
@@ -39,8 +40,17 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.services-container {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+
 .service {
-    margin-bottom: 20px;
+    margin: 0 20px; /* Add margin between services */
+    text-align: center; /* Center text within each service */
+    flex: 1 1 200px; /* Allow the service boxes to grow and shrink */
+    max-width: 300px; /* Set a maximum width for each service box */
 }
 
 footer {
