@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your CSS file -->
-    <title>Therapist Booking</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Home - MedTherapy</title>
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Therapist Booking Website</h1>
+        <h1>Welcome to MedTherapy</h1>
         <nav>
             <ul>
                 <li><a href="#services">Services</a></li>

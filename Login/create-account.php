@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account - Medical Therapy Booking</title>
+    <title>Create Account - MedTherapy</title>
     <link rel="stylesheet" href="createaccount-styles.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
             </div>
             <button type="submit">Create Account</button>
-            <p class="message">Already have an account? <a href="index.php">Login here</a></p>
+            <p class="message">Already have an account? <a href="login.php">Login here</a></p>
         </form>
     </div>
     <script src="create-account.js"></script>
