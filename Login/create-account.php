@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Create Your Account</h1>
-        <form action="includes/signup.inc.php" id="createAccountForm" method="POST">
+        <form action="login.php" id="createAccountForm" method="POST">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" required>
@@ -27,9 +27,8 @@
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
             </div>
             <button type="submit">Create Account</button>
-            <p class="message">Already have an account? <a href="index.php">Login here</a></p>
+            <p class="message">Already have an account? <a href="login.php">Login here</a></p>
         </form>
     </div>
-    <script src="create-account.js"></script>
 </body>
 </html>

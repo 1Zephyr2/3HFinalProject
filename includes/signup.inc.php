@@ -1,17 +1,12 @@
 <?php
+session_start();
 
-// Database connection details 
-$servername = "localhost";
-$username = "root"; 
-$password = "";     
-$dbname = "cit17database";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Database connection
+include('db.inc.php');
 
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
 // Get form data
@@ -21,18 +16,21 @@ $password = $_POST["password"];
 $confirmPassword = $_POST["confirmPassword"];
 
 // Basic validation
+$errors = array(); 
+
 if (empty($fullName) || empty($email) || empty($password) || empty($confirmPassword)) {
-  echo "All fields are required.";
+    $errors[] = "All fields are required."; 
 }
+
 if ($password !== $confirmPassword) {
-  echo "Passwords do not match.";
+    $errors[] = "Passwords do not match.";
 }
+
 if (!empty($errors)) {
-    session_start();
-    $_SESSION['errors'] = $errors;
-    header("Location: Login/create-account.php");
+    $_SESSION['errors'] = $errors; 
+    header("Location: create-account.php"); 
     exit; 
-  }
+}
 
 // Hash the password
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -42,10 +40,14 @@ $stmt = $conn->prepare("INSERT INTO users (full_name, email, password, role) VAL
 $stmt->bind_param("sss", $fullName, $email, $hashedPassword);
 
 if ($stmt->execute()) {
-  header("Location: Mainpage/index.php");
-  exit;
+    header("Location: Mainpage/index.php"); 
+    exit;
 } else {
-  echo "Error: " . $stmt->error;
+    // Handle database error
+    $errors[] = "Error: " . $stmt->error; 
+    $_SESSION['errors'] = $errors;
+    header("Location: create-account.php"); 
+    exit;
 }
 
 $stmt->close();
