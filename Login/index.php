@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Welcome to MedTherapy</h1>
         <h3>Healing minds</h3>
-        <form id="loginForm">
+        <form id="loginForm" action="includes/login.inc.php" method="POST">
             <div class="form-group">
                 <label for="username">Email</label>
                 <input type="email" id="username" name="username" required>

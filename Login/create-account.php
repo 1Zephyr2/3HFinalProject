@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Create Your Account</h1>
-        <form id="createAccountForm">
+        <form action="includes/signup.inc.php" id="createAccountForm" method="POST">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" required>
