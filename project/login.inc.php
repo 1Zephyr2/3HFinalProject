@@ -3,7 +3,7 @@ session_start();
 
 // Database connection details 
 $host = 'localhost';
-$db = 'capstonedatabase'; 
+$db = 'cit17'; 
 $user = 'root'; 
 $password = ''; 
 
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Get form data
-$email = $_POST["username"]; 
+$email = $_POST["email"]; 
 $password = $_POST["password"];
 
 // Basic validation
@@ -24,10 +24,16 @@ if (empty($email) || empty($password)) {
 }
 
 // SQL query to fetch user data
-$stmt = $conn->prepare("SELECT user_id, password, role FROM users WHERE email = ?");
+$stmt = $conn->prepare("SELECT user_id, password FROM users WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $stmt->store_result();
+
+if ($stmt->execute()) {
+    header('Location: main.php');
+    exit;
+}
+
 
 if ($stmt->num_rows > 0) {
     $stmt->bind_result($user_id, $hashedPassword, $role);
@@ -52,7 +58,7 @@ if ($stmt->num_rows > 0) {
 $stmt->close();
 $conn->close();
 
-header("Location: Mainpage/index.php"); // Redirect to Mainpage/index.php after successful login
+header("Location: Mainpage/index.php");
 exit;
 
 ?>

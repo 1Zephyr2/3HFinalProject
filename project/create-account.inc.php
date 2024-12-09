@@ -4,11 +4,6 @@ session_start();
 // Database connection
 include('db.inc.php');
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 // Get form data
 $fullName = $_POST["fullName"];
 $email = $_POST["email"];
@@ -36,11 +31,13 @@ if (!empty($errors)) {
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // SQL query to insert data
-$stmt = $conn->prepare("INSERT INTO users (full_name, email, password, role) VALUES (?, ?, ?, 'customer')"); 
+$query = "INSERT INTO users (fullName, email, password) VALUES (?, ?, ?)";
+$stmt = $conn->prepare($query); 
 $stmt->bind_param("sss", $fullName, $email, $hashedPassword);
+$stmt->execute();
 
 if ($stmt->execute()) {
-    header("Location: Mainpage/index.php"); 
+    header("Location: login.php"); 
     exit;
 } else {
     // Handle database error

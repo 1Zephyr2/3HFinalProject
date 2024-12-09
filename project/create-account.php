@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,7 @@
 <body>
     <div class="container">
         <h1>Create Your Account</h1>
-        <form action="login.php" id="createAccountForm" method="POST">
+        <form action="create-account.inc.php" id="createAccountForm" method="POST">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" required>

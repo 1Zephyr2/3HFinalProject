@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +14,10 @@
     <div class="container">
         <h1>Welcome to MedTherapy</h1>
         <h3>Healing minds</h3>
-        <form action="Mainpage/index.php" id="loginForm" method="POST">
+        <form action="login.inc.php" id="loginForm" method="POST">
             <div class="form-group">
                 <label for="username">Email</label>
-                <input type="email" id="username" name="username" required>
+                <input type="email" id="username" name="email" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>

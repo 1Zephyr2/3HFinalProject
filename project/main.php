@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Home - MedTherapy</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
     <main>
         <section id="services">
             <h2>Services Offered</h2>
-            <div class="services-container"> <!-- Added container for centering -->
+            <div class="services-container">
             <div class="service">
                 <img src="images/individual.png"/>
                 <h3>Individual Therapy</h3>
@@ -46,16 +46,16 @@
             <p>Our therapists are trained professionals dedicated to helping you achieve your mental health goals. We offer a variety of services tailored to meet your individual needs. Whether you're seeking support for anxiety, depression, relationship issues, or personal growth, we are here to help.</p>
         </section>
 
-        <section id="appointments">
+        <section id="appointments" action="">
             <h2>Book an Appointment</h2>
-            <form action="submit_appointment.php" method="POST">
+            <form action="main.inc.php" method="POST">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="name" placeholder="Name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Email" required>
+                <input type="email" id="email" placeholder="Email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="service">Select Service:</label>

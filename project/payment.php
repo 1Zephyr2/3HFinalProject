@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payment.css">
 </head>
 <body>
     <div class="container">
         <h1>Payment Information</h1>
-        <form action="process_payment.php" method="POST">
+        <form action="payment.inc.php" method="POST">
             <div class="form-group">
                 <label for="card-type">Card Type:</label>
                 <select id="card-type" name="card-type">
